@@ -145,17 +145,12 @@ while run:
             ufo1X_change[i] -= random.randint(1, 10)
             ufo1Y[i] += ufo1Y_change[i]
         
-        #checks if the bullet his an enemy
-        collitionT = collition(ufo1X[i], ufo1Y[i], bulletX, bulletY)
-        if collitionT:
-            boomS = mixer.Sound('boom.wav')
-            boomS.play()
-            bulletY = 700
-            bullet_state = "ready"
-            score_value += 1
-            ufo1X[i] = random.randint(0, 800)
-            ufo1Y[i] = random.randint(50, 150)
-        ufo(ufo1X[i], ufo1Y[i], i)
+            if collide(enemy, player):
+                player.health -= 10
+                enemies.remove(enemy)
+            elif enemy.y + enemy.get_height() > HEIGHT:
+                lives -= 1
+                enemies.remove(enemy)
 
     #creates a bullet
     if bulletY <= 0:
