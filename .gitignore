@@ -1,6 +1,6 @@
 /.vscode
 /assets
-/back.jpg
+back.jpg
 /background.wav
 /boom.wav
 /bullet.png
@@ -8,9 +8,9 @@
 /falcon.png
 /highscore.txt
 /laser.wav
-/screenr.png
+screenr.png
 /spaceship.png
-/test.py
-/test2.png
+test.py
+test2.png
 /ufo.png
 /venv
